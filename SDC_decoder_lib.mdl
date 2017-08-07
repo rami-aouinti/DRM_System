@@ -1,0 +1,2193 @@
+Library {
+  Name			  "SDC_decoder_lib"
+  Version		  7.4
+  MdlSubVersion		  0
+  SavedCharacterEncoding  "windows-1252"
+  LibraryType		  "BlockLibrary"
+  SaveDefaultBlockParams  on
+  ScopeRefreshTime	  0.035000
+  OverrideScopeRefreshTime on
+  DisableAllScopes	  off
+  MaxMDLFileLineLength	  120
+  Created		  "Fri Apr 23 15:06:05 2010"
+  Creator		  "Kevin"
+  UpdateHistory		  "UpdateHistoryNever"
+  ModifiedByFormat	  "%<Auto>"
+  LastModifiedBy	  "Kevin"
+  ModifiedDateFormat	  "%<Auto>"
+  LastModifiedDate	  "Tue Jun 22 08:56:05 2010"
+  RTWModifiedTimeStamp	  199097762
+  ModelVersionFormat	  "1.%<AutoIncrement:23>"
+  ConfigurationManager	  "None"
+  SampleTimeColors	  off
+  SampleTimeAnnotations	  off
+  LibraryLinkDisplay	  "none"
+  WideLines		  off
+  ShowLineDimensions	  off
+  ShowPortDataTypes	  off
+  ShowLoopsOnError	  on
+  IgnoreBidirectionalLines off
+  ShowStorageClass	  off
+  ShowTestPointIcons	  on
+  ShowSignalResolutionIcons on
+  ShowViewerIcons	  on
+  SortedOrder		  off
+  ExecutionContextIcon	  off
+  ShowLinearizationAnnotations on
+  BlockNameDataTip	  off
+  BlockParametersDataTip  off
+  BlockDescriptionStringDataTip	off
+  ToolBar		  on
+  StatusBar		  on
+  BrowserShowLibraryLinks off
+  BrowserLookUnderMasks	  off
+  SimulationMode	  "normal"
+  LinearizationMsg	  "none"
+  Profile		  off
+  ParamWorkspaceSource	  "MATLABWorkspace"
+  CovSaveName		  "covdata"
+  CovMetricSettings	  "dw"
+  CovNameIncrementing	  off
+  CovHtmlReporting	  on
+  CovForceBlockReductionOff on
+  covSaveCumulativeToWorkspaceVar on
+  CovSaveSingleToWorkspaceVar on
+  CovCumulativeReport	  off
+  CovReportOnPause	  on
+  CovModelRefEnable	  "Off"
+  CovExternalEMLEnable	  off
+  ExtModeBatchMode	  off
+  ExtModeEnableFloating	  on
+  ExtModeTrigType	  "manual"
+  ExtModeTrigMode	  "normal"
+  ExtModeTrigPort	  "1"
+  ExtModeTrigElement	  "any"
+  ExtModeTrigDuration	  1000
+  ExtModeTrigDurationFloating "auto"
+  ExtModeTrigHoldOff	  0
+  ExtModeTrigDelay	  0
+  ExtModeTrigDirection	  "rising"
+  ExtModeTrigLevel	  0
+  ExtModeArchiveMode	  "off"
+  ExtModeAutoIncOneShot	  off
+  ExtModeIncDirWhenArm	  off
+  ExtModeAddSuffixToVar	  off
+  ExtModeWriteAllDataToWs off
+  ExtModeArmWhenConnect	  on
+  ExtModeSkipDownloadWhenConnect off
+  ExtModeLogAll		  on
+  ExtModeAutoUpdateStatusClock on
+  ShowModelReferenceBlockVersion off
+  ShowModelReferenceBlockIO off
+  Array {
+    Type		    "Handle"
+    Dimension		    1
+    Simulink.ConfigSet {
+      $ObjectID		      1
+      Version		      "1.6.0"
+      Array {
+	Type			"Handle"
+	Dimension		8
+	Simulink.SolverCC {
+	  $ObjectID		  2
+	  Version		  "1.6.0"
+	  StartTime		  "0.0"
+	  StopTime		  "10.0"
+	  AbsTol		  "auto"
+	  FixedStep		  "auto"
+	  InitialStep		  "auto"
+	  MaxNumMinSteps	  "-1"
+	  MaxOrder		  5
+	  ZcThreshold		  "auto"
+	  ConsecutiveZCsStepRelTol "10*128*eps"
+	  MaxConsecutiveZCs	  "1000"
+	  ExtrapolationOrder	  4
+	  NumberNewtonIterations  1
+	  MaxStep		  "auto"
+	  MinStep		  "auto"
+	  MaxConsecutiveMinStep	  "1"
+	  RelTol		  "1e-3"
+	  SolverMode		  "Auto"
+	  Solver		  "ode45"
+	  SolverName		  "ode45"
+	  ShapePreserveControl	  "DisableAll"
+	  ZeroCrossControl	  "UseLocalSettings"
+	  ZeroCrossAlgorithm	  "Nonadaptive"
+	  AlgebraicLoopSolver	  "TrustRegion"
+	  SolverResetMethod	  "Fast"
+	  PositivePriorityOrder	  off
+	  AutoInsertRateTranBlk	  off
+	  SampleTimeConstraint	  "Unconstrained"
+	  InsertRTBMode		  "Whenever possible"
+	}
+	Simulink.DataIOCC {
+	  $ObjectID		  3
+	  Version		  "1.6.0"
+	  Decimation		  "1"
+	  ExternalInput		  "[t, u]"
+	  FinalStateName	  "xFinal"
+	  InitialState		  "xInitial"
+	  LimitDataPoints	  on
+	  MaxDataPoints		  "1000"
+	  LoadExternalInput	  off
+	  LoadInitialState	  off
+	  SaveFinalState	  off
+	  SaveCompleteFinalSimState off
+	  SaveFormat		  "Array"
+	  SaveOutput		  on
+	  SaveState		  off
+	  SignalLogging		  on
+	  InspectSignalLogs	  off
+	  SaveTime		  on
+	  ReturnWorkspaceOutputs  off
+	  StateSaveName		  "xout"
+	  TimeSaveName		  "tout"
+	  OutputSaveName	  "yout"
+	  SignalLoggingName	  "logsout"
+	  OutputOption		  "RefineOutputTimes"
+	  OutputTimes		  "[]"
+	  ReturnWorkspaceOutputsName "out"
+	  Refine		  "1"
+	}
+	Simulink.OptimizationCC {
+	  $ObjectID		  4
+	  Version		  "1.6.0"
+	  Array {
+	    Type		    "Cell"
+	    Dimension		    7
+	    Cell		    "BooleansAsBitfields"
+	    Cell		    "PassReuseOutputArgsAs"
+	    Cell		    "PassReuseOutputArgsThreshold"
+	    Cell		    "ZeroExternalMemoryAtStartup"
+	    Cell		    "ZeroInternalMemoryAtStartup"
+	    Cell		    "OptimizeModelRefInitCode"
+	    Cell		    "NoFixptDivByZeroProtection"
+	    PropName		    "DisabledProps"
+	  }
+	  BlockReduction	  on
+	  BooleanDataType	  on
+	  ConditionallyExecuteInputs on
+	  InlineParams		  off
+	  UseIntDivNetSlope	  off
+	  InlineInvariantSignals  off
+	  OptimizeBlockIOStorage  on
+	  BufferReuse		  on
+	  EnhancedBackFolding	  off
+	  StrengthReduction	  off
+	  EnforceIntegerDowncast  on
+	  ExpressionFolding	  on
+	  BooleansAsBitfields	  off
+	  EnableMemcpy		  on
+	  MemcpyThreshold	  64
+	  PassReuseOutputArgsAs	  "Structure reference"
+	  ExpressionDepthLimit	  2147483647
+	  FoldNonRolledExpr	  on
+	  LocalBlockOutputs	  on
+	  RollThreshold		  5
+	  SystemCodeInlineAuto	  off
+	  StateBitsets		  off
+	  DataBitsets		  off
+	  UseTempVars		  off
+	  ZeroExternalMemoryAtStartup on
+	  ZeroInternalMemoryAtStartup on
+	  InitFltsAndDblsToZero	  off
+	  NoFixptDivByZeroProtection off
+	  EfficientFloat2IntCast  off
+	  EfficientMapNaN2IntZero on
+	  OptimizeModelRefInitCode off
+	  LifeSpan		  "inf"
+	  BufferReusableBoundary  on
+	  SimCompilerOptimization "Off"
+	  AccelVerboseBuild	  off
+	}
+	Simulink.DebuggingCC {
+	  $ObjectID		  5
+	  Version		  "1.6.0"
+	  RTPrefix		  "error"
+	  ConsistencyChecking	  "none"
+	  ArrayBoundsChecking	  "none"
+	  SignalInfNanChecking	  "none"
+	  SignalRangeChecking	  "none"
+	  ReadBeforeWriteMsg	  "UseLocalSettings"
+	  WriteAfterWriteMsg	  "UseLocalSettings"
+	  WriteAfterReadMsg	  "UseLocalSettings"
+	  AlgebraicLoopMsg	  "warning"
+	  ArtificialAlgebraicLoopMsg "warning"
+	  SaveWithDisabledLinksMsg "warning"
+	  SaveWithParameterizedLinksMsg	"warning"
+	  CheckSSInitialOutputMsg on
+	  UnderspecifiedInitializationDetection	"Classic"
+	  MergeDetectMultiDrivingBlocksExec "none"
+	  CheckExecutionContextPreStartOutputMsg off
+	  CheckExecutionContextRuntimeOutputMsg	off
+	  SignalResolutionControl "UseLocalSettings"
+	  BlockPriorityViolationMsg "warning"
+	  MinStepSizeMsg	  "warning"
+	  TimeAdjustmentMsg	  "none"
+	  MaxConsecutiveZCsMsg	  "error"
+	  SolverPrmCheckMsg	  "warning"
+	  InheritedTsInSrcMsg	  "warning"
+	  DiscreteInheritContinuousMsg "warning"
+	  MultiTaskDSMMsg	  "error"
+	  MultiTaskCondExecSysMsg "error"
+	  MultiTaskRateTransMsg	  "error"
+	  SingleTaskRateTransMsg  "none"
+	  TasksWithSamePriorityMsg "warning"
+	  SigSpecEnsureSampleTimeMsg "warning"
+	  CheckMatrixSingularityMsg "none"
+	  IntegerOverflowMsg	  "warning"
+	  Int32ToFloatConvMsg	  "warning"
+	  ParameterDowncastMsg	  "error"
+	  ParameterOverflowMsg	  "error"
+	  ParameterUnderflowMsg	  "none"
+	  ParameterPrecisionLossMsg "warning"
+	  ParameterTunabilityLossMsg "warning"
+	  FixptConstUnderflowMsg  "none"
+	  FixptConstOverflowMsg	  "none"
+	  FixptConstPrecisionLossMsg "none"
+	  UnderSpecifiedDataTypeMsg "none"
+	  UnnecessaryDatatypeConvMsg "none"
+	  VectorMatrixConversionMsg "none"
+	  InvalidFcnCallConnMsg	  "error"
+	  FcnCallInpInsideContextMsg "Use local settings"
+	  SignalLabelMismatchMsg  "none"
+	  UnconnectedInputMsg	  "warning"
+	  UnconnectedOutputMsg	  "warning"
+	  UnconnectedLineMsg	  "warning"
+	  SFcnCompatibilityMsg	  "none"
+	  UniqueDataStoreMsg	  "none"
+	  BusObjectLabelMismatch  "warning"
+	  RootOutportRequireBusObject "warning"
+	  AssertControl		  "UseLocalSettings"
+	  EnableOverflowDetection off
+	  ModelReferenceIOMsg	  "none"
+	  ModelReferenceVersionMismatchMessage "none"
+	  ModelReferenceIOMismatchMessage "none"
+	  ModelReferenceCSMismatchMessage "none"
+	  UnknownTsInhSupMsg	  "warning"
+	  ModelReferenceDataLoggingMessage "warning"
+	  ModelReferenceSymbolNameMessage "warning"
+	  ModelReferenceExtraNoncontSigs "error"
+	  StateNameClashWarn	  "warning"
+	  SimStateInterfaceChecksumMismatchMsg "warning"
+	  StrictBusMsg		  "Warning"
+	  LoggingUnavailableSignals "error"
+	  BlockIODiagnostic	  "none"
+	}
+	Simulink.HardwareCC {
+	  $ObjectID		  6
+	  Version		  "1.6.0"
+	  ProdBitPerChar	  8
+	  ProdBitPerShort	  16
+	  ProdBitPerInt		  32
+	  ProdBitPerLong	  32
+	  ProdIntDivRoundTo	  "Undefined"
+	  ProdEndianess		  "Unspecified"
+	  ProdWordSize		  32
+	  ProdShiftRightIntArith  on
+	  ProdHWDeviceType	  "32-bit Generic"
+	  TargetBitPerChar	  8
+	  TargetBitPerShort	  16
+	  TargetBitPerInt	  32
+	  TargetBitPerLong	  32
+	  TargetShiftRightIntArith on
+	  TargetIntDivRoundTo	  "Undefined"
+	  TargetEndianess	  "Unspecified"
+	  TargetWordSize	  32
+	  TargetTypeEmulationWarnSuppressLevel 0
+	  TargetPreprocMaxBitsSint 32
+	  TargetPreprocMaxBitsUint 32
+	  TargetHWDeviceType	  "Specified"
+	  TargetUnknown		  off
+	  ProdEqTarget		  on
+	}
+	Simulink.ModelReferenceCC {
+	  $ObjectID		  7
+	  Version		  "1.6.0"
+	  UpdateModelReferenceTargets "IfOutOfDateOrStructuralChange"
+	  CheckModelReferenceTargetMessage "error"
+	  ModelReferenceNumInstancesAllowed "Multi"
+	  ModelReferencePassRootInputsByReference on
+	  ModelReferenceMinAlgLoopOccurrences off
+	}
+	Simulink.SFSimCC {
+	  $ObjectID		  8
+	  Version		  "1.6.0"
+	  SFSimEnableDebug	  on
+	  SFSimOverflowDetection  on
+	  SFSimEcho		  on
+	  SimBlas		  on
+	  SimCtrlC		  on
+	  SimExtrinsic		  on
+	  SimIntegrity		  on
+	  SimUseLocalCustomCode	  off
+	  SimBuildMode		  "sf_incremental_build"
+	}
+	Simulink.RTWCC {
+	  $BackupClass		  "Simulink.RTWCC"
+	  $ObjectID		  9
+	  Version		  "1.6.0"
+	  Array {
+	    Type		    "Cell"
+	    Dimension		    6
+	    Cell		    "IncludeHyperlinkInReport"
+	    Cell		    "GenerateTraceInfo"
+	    Cell		    "GenerateTraceReport"
+	    Cell		    "GenerateTraceReportSl"
+	    Cell		    "GenerateTraceReportSf"
+	    Cell		    "GenerateTraceReportEml"
+	    PropName		    "DisabledProps"
+	  }
+	  SystemTargetFile	  "grt.tlc"
+	  GenCodeOnly		  off
+	  MakeCommand		  "make_rtw"
+	  GenerateMakefile	  on
+	  TemplateMakefile	  "grt_default_tmf"
+	  GenerateReport	  off
+	  SaveLog		  off
+	  RTWVerbose		  on
+	  RetainRTWFile		  off
+	  ProfileTLC		  off
+	  TLCDebug		  off
+	  TLCCoverage		  off
+	  TLCAssert		  off
+	  ProcessScriptMode	  "Default"
+	  ConfigurationMode	  "Optimized"
+	  ConfigAtBuild		  off
+	  RTWUseLocalCustomCode	  off
+	  RTWUseSimCustomCode	  off
+	  IncludeHyperlinkInReport off
+	  LaunchReport		  off
+	  TargetLang		  "C"
+	  IncludeBusHierarchyInRTWFileBlockHierarchyMap	off
+	  IncludeERTFirstTime	  off
+	  GenerateTraceInfo	  off
+	  GenerateTraceReport	  off
+	  GenerateTraceReportSl	  off
+	  GenerateTraceReportSf	  off
+	  GenerateTraceReportEml  off
+	  GenerateCodeInfo	  off
+	  RTWCompilerOptimization "Off"
+	  CheckMdlBeforeBuild	  "Off"
+	  Array {
+	    Type		    "Handle"
+	    Dimension		    2
+	    Simulink.CodeAppCC {
+	      $ObjectID		      10
+	      Version		      "1.6.0"
+	      Array {
+		Type			"Cell"
+		Dimension		19
+		Cell			"IgnoreCustomStorageClasses"
+		Cell			"IgnoreTestpoints"
+		Cell			"InsertBlockDesc"
+		Cell			"SFDataObjDesc"
+		Cell			"SimulinkDataObjDesc"
+		Cell			"DefineNamingRule"
+		Cell			"SignalNamingRule"
+		Cell			"ParamNamingRule"
+		Cell			"InlinedPrmAccess"
+		Cell			"CustomSymbolStr"
+		Cell			"CustomSymbolStrGlobalVar"
+		Cell			"CustomSymbolStrType"
+		Cell			"CustomSymbolStrField"
+		Cell			"CustomSymbolStrFcn"
+		Cell			"CustomSymbolStrFcnArg"
+		Cell			"CustomSymbolStrBlkIO"
+		Cell			"CustomSymbolStrTmpVar"
+		Cell			"CustomSymbolStrMacro"
+		Cell			"ReqsInCode"
+		PropName		"DisabledProps"
+	      }
+	      ForceParamTrailComments off
+	      GenerateComments	      on
+	      IgnoreCustomStorageClasses on
+	      IgnoreTestpoints	      off
+	      IncHierarchyInIds	      off
+	      MaxIdLength	      31
+	      PreserveName	      off
+	      PreserveNameWithParent  off
+	      ShowEliminatedStatement off
+	      IncAutoGenComments      off
+	      SimulinkDataObjDesc     off
+	      SFDataObjDesc	      off
+	      IncDataTypeInIds	      off
+	      MangleLength	      1
+	      CustomSymbolStrGlobalVar "$R$N$M"
+	      CustomSymbolStrType     "$N$R$M"
+	      CustomSymbolStrField    "$N$M"
+	      CustomSymbolStrFcn      "$R$N$M$F"
+	      CustomSymbolStrFcnArg   "rt$I$N$M"
+	      CustomSymbolStrBlkIO    "rtb_$N$M"
+	      CustomSymbolStrTmpVar   "$N$M"
+	      CustomSymbolStrMacro    "$R$N$M"
+	      DefineNamingRule	      "None"
+	      ParamNamingRule	      "None"
+	      SignalNamingRule	      "None"
+	      InsertBlockDesc	      off
+	      SimulinkBlockComments   on
+	      EnableCustomComments    off
+	      InlinedPrmAccess	      "Literals"
+	      ReqsInCode	      off
+	      UseSimReservedNames     off
+	    }
+	    Simulink.GRTTargetCC {
+	      $BackupClass	      "Simulink.TargetCC"
+	      $ObjectID		      11
+	      Version		      "1.6.0"
+	      Array {
+		Type			"Cell"
+		Dimension		17
+		Cell			"GeneratePreprocessorConditionals"
+		Cell			"IncludeMdlTerminateFcn"
+		Cell			"CombineOutputUpdateFcns"
+		Cell			"SuppressErrorStatus"
+		Cell			"ERTCustomFileBanners"
+		Cell			"GenerateSampleERTMain"
+		Cell			"GenerateTestInterfaces"
+		Cell			"ModelStepFunctionPrototypeControlCompliant"
+		Cell			"CPPClassGenCompliant"
+		Cell			"MultiInstanceERTCode"
+		Cell			"PurelyIntegerCode"
+		Cell			"SupportNonFinite"
+		Cell			"SupportComplex"
+		Cell			"SupportAbsoluteTime"
+		Cell			"SupportContinuousTime"
+		Cell			"SupportNonInlinedSFcns"
+		Cell			"PortableWordSizes"
+		PropName		"DisabledProps"
+	      }
+	      TargetFcnLib	      "ansi_tfl_table_tmw.mat"
+	      TargetLibSuffix	      ""
+	      TargetPreCompLibLocation ""
+	      TargetFunctionLibrary   "ANSI_C"
+	      UtilityFuncGeneration   "Auto"
+	      ERTMultiwordTypeDef     "System defined"
+	      ERTMultiwordLength      256
+	      MultiwordLength	      2048
+	      GenerateFullHeader      on
+	      GenerateSampleERTMain   off
+	      GenerateTestInterfaces  off
+	      IsPILTarget	      off
+	      ModelReferenceCompliant on
+	      ParMdlRefBuildCompliant on
+	      CompOptLevelCompliant   on
+	      IncludeMdlTerminateFcn  on
+	      GeneratePreprocessorConditionals "Disable all"
+	      CombineOutputUpdateFcns off
+	      SuppressErrorStatus     off
+	      ERTFirstTimeCompliant   off
+	      IncludeFileDelimiter    "Auto"
+	      ERTCustomFileBanners    off
+	      SupportAbsoluteTime     on
+	      LogVarNameModifier      "rt_"
+	      MatFileLogging	      on
+	      MultiInstanceERTCode    off
+	      SupportNonFinite	      on
+	      SupportComplex	      on
+	      PurelyIntegerCode	      off
+	      SupportContinuousTime   on
+	      SupportNonInlinedSFcns  on
+	      SupportVariableSizeSignals off
+	      EnableShiftOperators    on
+	      ParenthesesLevel	      "Nominal"
+	      PortableWordSizes	      off
+	      ModelStepFunctionPrototypeControlCompliant off
+	      CPPClassGenCompliant    off
+	      AutosarCompliant	      off
+	      UseMalloc		      off
+	      ExtMode		      off
+	      ExtModeStaticAlloc      off
+	      ExtModeTesting	      off
+	      ExtModeStaticAllocSize  1000000
+	      ExtModeTransport	      0
+	      ExtModeMexFile	      "ext_comm"
+	      ExtModeIntrfLevel	      "Level1"
+	      RTWCAPISignals	      off
+	      RTWCAPIParams	      off
+	      RTWCAPIStates	      off
+	      GenerateASAP2	      off
+	    }
+	    PropName		    "Components"
+	  }
+	}
+	PropName		"Components"
+      }
+      Name		      "Configuration"
+      CurrentDlgPage	      "Solver"
+      ConfigPrmDlgPosition    " [ 584, 261, 1464, 891 ] "
+    }
+    PropName		    "ConfigurationSets"
+  }
+  BlockDefaults {
+    ForegroundColor	    "black"
+    BackgroundColor	    "white"
+    DropShadow		    off
+    NamePlacement	    "normal"
+    FontName		    "Helvetica"
+    FontSize		    10
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+    ShowName		    on
+    BlockRotation	    0
+    BlockMirror		    off
+  }
+  AnnotationDefaults {
+    HorizontalAlignment	    "center"
+    VerticalAlignment	    "middle"
+    ForegroundColor	    "black"
+    BackgroundColor	    "white"
+    DropShadow		    off
+    FontName		    "Helvetica"
+    FontSize		    10
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+    UseDisplayTextAsClickCallback off
+  }
+  LineDefaults {
+    FontName		    "Helvetica"
+    FontSize		    9
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+  }
+  BlockParameterDefaults {
+    Block {
+      BlockType		      Concatenate
+      NumInputs		      "2"
+      ConcatenateDimension    "1"
+    }
+    Block {
+      BlockType		      Demux
+      Outputs		      "4"
+      DisplayOption	      "none"
+      BusSelectionMode	      off
+    }
+    Block {
+      BlockType		      Inport
+      Port		      "1"
+      UseBusObject	      off
+      BusObject		      "BusObject"
+      BusOutputAsStruct	      off
+      PortDimensions	      "-1"
+      VarSizeSig	      "Inherit"
+      SampleTime	      "-1"
+      OutMin		      "[]"
+      OutMax		      "[]"
+      DataType		      "auto"
+      OutDataType	      "fixdt(1,16,0)"
+      OutScaling	      "[]"
+      OutDataTypeStr	      "Inherit: auto"
+      LockScale		      off
+      SignalType	      "auto"
+      SamplingMode	      "auto"
+      LatchByDelayingOutsideSignal off
+      LatchByCopyingInsideSignal off
+      Interpolate	      on
+    }
+    Block {
+      BlockType		      Outport
+      Port		      "1"
+      UseBusObject	      off
+      BusObject		      "BusObject"
+      BusOutputAsStruct	      off
+      PortDimensions	      "-1"
+      VarSizeSig	      "Inherit"
+      SampleTime	      "-1"
+      OutMin		      "[]"
+      OutMax		      "[]"
+      DataType		      "auto"
+      OutDataType	      "fixdt(1,16,0)"
+      OutScaling	      "[]"
+      OutDataTypeStr	      "Inherit: auto"
+      LockScale		      off
+      SignalType	      "auto"
+      SamplingMode	      "auto"
+      SourceOfInitialOutputValue "Dialog"
+      OutputWhenDisabled      "held"
+      InitialOutput	      "[]"
+    }
+    Block {
+      BlockType		      SubSystem
+      ShowPortLabels	      "FromPortIcon"
+      Permissions	      "ReadWrite"
+      PermitHierarchicalResolution "All"
+      TreatAsAtomicUnit	      off
+      CheckFcnCallInpInsideContextMsg off
+      SystemSampleTime	      "-1"
+      RTWFcnNameOpts	      "Auto"
+      RTWFileNameOpts	      "Auto"
+      RTWMemSecFuncInitTerm   "Inherit from model"
+      RTWMemSecFuncExecute    "Inherit from model"
+      RTWMemSecDataConstants  "Inherit from model"
+      RTWMemSecDataInternal   "Inherit from model"
+      RTWMemSecDataParameters "Inherit from model"
+      SimViewingDevice	      off
+      DataTypeOverride	      "UseLocalSettings"
+      MinMaxOverflowLogging   "UseLocalSettings"
+    }
+  }
+  System {
+    Name		    "SDC_decoder_lib"
+    Location		    [589, 234, 1713, 657]
+    Open		    on
+    ModelBrowserVisibility  off
+    ModelBrowserWidth	    200
+    ScreenColor		    "white"
+    PaperOrientation	    "landscape"
+    PaperPositionMode	    "auto"
+    PaperType		    "A4"
+    PaperUnits		    "centimeters"
+    TiledPaperMargins	    [1.270000, 1.270000, 1.270000, 1.270000]
+    TiledPageScale	    1
+    ShowPageBoundaries	    off
+    ZoomFactor		    "100"
+    ReportName		    "simulink-default.rpt"
+    SIDHighWatermark	    375
+    Block {
+      BlockType		      SubSystem
+      Name		      "16QAM"
+      SID		      245
+      Ports		      [1, 1]
+      Position		      [310, 115, 485, 185]
+      BlockMirror	      on
+      MinAlgLoopOccurrences   off
+      PropExecContextOutsideSubsystem off
+      RTWSystemCode	      "Auto"
+      FunctionWithSeparateData off
+      Opaque		      off
+      RequestExecContextInheritance off
+      MaskHideContents	      off
+      System {
+	Name			"16QAM"
+	Location		[339, 173, 1436, 634]
+	Open			on
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"A4"
+	PaperUnits		"centimeters"
+	TiledPaperMargins	[1.270000, 1.270000, 1.270000, 1.270000]
+	TiledPageScale		1
+	ShowPageBoundaries	off
+	ZoomFactor		"100"
+	Block {
+	  BlockType		  Inport
+	  Name			  "In1"
+	  SID			  246
+	  Position		  [810, 83, 840, 97]
+	  BlockMirror		  on
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  SubSystem
+	  Name			  "Concatenate\nbitstream"
+	  SID			  247
+	  Ports			  [2, 1]
+	  Position		  [80, 29, 130, 151]
+	  BlockMirror		  on
+	  MinAlgLoopOccurrences	  off
+	  PropExecContextOutsideSubsystem off
+	  RTWSystemCode		  "Auto"
+	  FunctionWithSeparateData off
+	  Opaque		  off
+	  RequestExecContextInheritance	off
+	  MaskHideContents	  off
+	  System {
+	    Name		    "Concatenate\nbitstream"
+	    Location		    [482, 424, 1280, 835]
+	    Open		    off
+	    ModelBrowserVisibility  off
+	    ModelBrowserWidth	    200
+	    ScreenColor		    "white"
+	    PaperOrientation	    "landscape"
+	    PaperPositionMode	    "auto"
+	    PaperType		    "A4"
+	    PaperUnits		    "centimeters"
+	    TiledPaperMargins	    [1.270000, 1.270000, 1.270000, 1.270000]
+	    TiledPageScale	    1
+	    ShowPageBoundaries	    off
+	    ZoomFactor		    "100"
+	    Block {
+	      BlockType		      Inport
+	      Name		      "x1r"
+	      SID		      248
+	      Position		      [250, 88, 280, 102]
+	      BlockMirror	      on
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "x0r"
+	      SID		      249
+	      Position		      [250, 33, 280, 47]
+	      BlockMirror	      on
+	      Port		      "2"
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Concatenate
+	      Name		      "Matrix\nConcatenate"
+	      SID		      250
+	      Ports		      [2, 1]
+	      Position		      [80, 29, 135, 71]
+	      BlockMirror	      on
+	      Mode		      "Multidimensional array"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "u0r"
+	      SID		      251
+	      Position		      [15, 43, 45, 57]
+	      BlockMirror	      on
+	      IconDisplay	      "Port number"
+	    }
+	    Line {
+	      SrcBlock		      "Matrix\nConcatenate"
+	      SrcPort		      1
+	      DstBlock		      "u0r"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "x0r"
+	      SrcPort		      1
+	      DstBlock		      "Matrix\nConcatenate"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "x1r"
+	      SrcPort		      1
+	      Points		      [-45, 0; 0, -35]
+	      DstBlock		      "Matrix\nConcatenate"
+	      DstPort		      2
+	    }
+	  }
+	}
+	Block {
+	  BlockType		  SubSystem
+	  Name			  "Decoder D0"
+	  SID			  252
+	  Ports			  [1, 1]
+	  Position		  [330, 118, 410, 172]
+	  BlockMirror		  on
+	  MinAlgLoopOccurrences	  off
+	  PropExecContextOutsideSubsystem off
+	  RTWSystemCode		  "Auto"
+	  FunctionWithSeparateData off
+	  Opaque		  off
+	  RequestExecContextInheritance	off
+	  MaskHideContents	  off
+	  System {
+	    Name		    "Decoder D0"
+	    Location		    [722, 511, 1257, 619]
+	    Open		    off
+	    ModelBrowserVisibility  off
+	    ModelBrowserWidth	    200
+	    ScreenColor		    "white"
+	    PaperOrientation	    "landscape"
+	    PaperPositionMode	    "auto"
+	    PaperType		    "A4"
+	    PaperUnits		    "centimeters"
+	    TiledPaperMargins	    [1.270000, 1.270000, 1.270000, 1.270000]
+	    TiledPageScale	    1
+	    ShowPageBoundaries	    off
+	    ZoomFactor		    "100"
+	    Block {
+	      BlockType		      Inport
+	      Name		      "v0r"
+	      SID		      253
+	      Position		      [480, 48, 510, 62]
+	      BlockMirror	      on
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      SubSystem
+	      Name		      "Depuncturing C0"
+	      SID		      254
+	      Ports		      [1, 1]
+	      Position		      [375, 28, 455, 82]
+	      BlockMirror	      on
+	      MinAlgLoopOccurrences   off
+	      PropExecContextOutsideSubsystem off
+	      RTWSystemCode	      "Auto"
+	      FunctionWithSeparateData off
+	      Opaque		      off
+	      RequestExecContextInheritance off
+	      MaskHideContents	      off
+	      System {
+		Name			"Depuncturing C0"
+		Location		[817, 822, 1442, 988]
+		Open			off
+		ModelBrowserVisibility	off
+		ModelBrowserWidth	200
+		ScreenColor		"white"
+		PaperOrientation	"landscape"
+		PaperPositionMode	"auto"
+		PaperType		"A4"
+		PaperUnits		"centimeters"
+		TiledPaperMargins	[1.270000, 1.270000, 1.270000, 1.270000]
+		TiledPageScale		1
+		ShowPageBoundaries	off
+		ZoomFactor		"100"
+		Block {
+		  BlockType		  Inport
+		  Name			  "In1"
+		  SID			  255
+		  Position		  [570, 43, 600, 57]
+		  BlockMirror		  on
+		  IconDisplay		  "Port number"
+		}
+		Block {
+		  BlockType		  Reference
+		  Name			  "Converter for \nunquantized\ndecision"
+		  SID			  256
+		  Ports			  [1, 1]
+		  Position		  [485, 30, 545, 70]
+		  BlockMirror		  on
+		  SourceBlock		  "commutil2/Unipolar to\nBipolar\nConverter"
+		  SourceType		  "Unipolar to Bipolar Converter"
+		  ShowPortLabels	  "FromPortIcon"
+		  SystemSampleTime	  "-1"
+		  FunctionWithSeparateData "off"
+		  RTWMemSecFuncInitTerm	  "Inherit from model"
+		  RTWMemSecFuncExecute	  "Inherit from model"
+		  RTWMemSecDataConstants  "Inherit from model"
+		  RTWMemSecDataInternal	  "Inherit from model"
+		  RTWMemSecDataParameters "Inherit from model"
+		  M			  "2"
+		  polarity		  "Negative"
+		  dataType		  "Inherit via internal rule"
+		}
+		Block {
+		  BlockType		  Reference
+		  Name			  "Depuncture C0"
+		  SID			  257
+		  Ports			  [1, 1]
+		  Position		  [200, 28, 280, 72]
+		  BlockMirror		  on
+		  SourceBlock		  "commsequence2/Insert Zero"
+		  SourceType		  "Insert Zero"
+		  insertZeroVector	  "sdc.punc_pat0"
+		}
+		Block {
+		  BlockType		  Reference
+		  Name			  "Depuncture tailbits C0"
+		  SID			  258
+		  Ports			  [1, 1]
+		  Position		  [200, 98, 280, 142]
+		  BlockMirror		  on
+		  SourceBlock		  "commsequence2/Insert Zero"
+		  SourceType		  "Insert Zero"
+		  insertZeroVector	  "sdc.punc_tail0"
+		}
+		Block {
+		  BlockType		  Concatenate
+		  Name			  "Matrix\nConcatenate"
+		  SID			  259
+		  Ports			  [2, 1]
+		  Position		  [80, 39, 135, 81]
+		  BlockMirror		  on
+		  Mode			  "Multidimensional array"
+		}
+		Block {
+		  BlockType		  Reference
+		  Name			  "Submatrix"
+		  SID			  260
+		  Ports			  [1, 1]
+		  Position		  [355, 30, 405, 70]
+		  BlockMirror		  on
+		  SourceBlock		  "dspmtrx3/Submatrix"
+		  SourceType		  "Submatrix"
+		  RowSpan		  "Range of rows"
+		  RowStartMode		  "First"
+		  RowStartIndex		  "1"
+		  RowEndMode		  "Offset from last"
+		  RowEndIndex		  "sdc.ind_tail0"
+		  ColSpan		  "All columns"
+		  ColStartMode		  "First"
+		  ColStartIndex		  "1"
+		  ColEndMode		  "Last"
+		  ColEndIndex		  "1"
+		}
+		Block {
+		  BlockType		  Reference
+		  Name			  "extract tailbits"
+		  SID			  261
+		  Ports			  [1, 1]
+		  Position		  [355, 100, 405, 140]
+		  BlockMirror		  on
+		  SourceBlock		  "dspmtrx3/Submatrix"
+		  SourceType		  "Submatrix"
+		  RowSpan		  "Range of rows"
+		  RowStartMode		  "Offset from last"
+		  RowStartIndex		  "sdc.ind_tail0-1"
+		  RowEndMode		  "Last"
+		  RowEndIndex		  "35"
+		  ColSpan		  "All columns"
+		  ColStartMode		  "First"
+		  ColStartIndex		  "1"
+		  ColEndMode		  "Last"
+		  ColEndIndex		  "1"
+		}
+		Block {
+		  BlockType		  Outport
+		  Name			  "Out1"
+		  SID			  262
+		  Position		  [25, 53, 55, 67]
+		  BlockMirror		  on
+		  IconDisplay		  "Port number"
+		}
+		Line {
+		  SrcBlock		  "Matrix\nConcatenate"
+		  SrcPort		  1
+		  DstBlock		  "Out1"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "In1"
+		  SrcPort		  1
+		  DstBlock		  "Converter for \nunquantized\ndecision"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "Converter for \nunquantized\ndecision"
+		  SrcPort		  1
+		  Points		  [-40, 0]
+		  Branch {
+		    DstBlock		    "Submatrix"
+		    DstPort		    1
+		  }
+		  Branch {
+		    Points		    [0, 70]
+		    DstBlock		    "extract tailbits"
+		    DstPort		    1
+		  }
+		}
+		Line {
+		  SrcBlock		  "extract tailbits"
+		  SrcPort		  1
+		  DstBlock		  "Depuncture tailbits C0"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "Submatrix"
+		  SrcPort		  1
+		  DstBlock		  "Depuncture C0"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "Depuncture tailbits C0"
+		  SrcPort		  1
+		  Points		  [-20, 0; 0, -50]
+		  DstBlock		  "Matrix\nConcatenate"
+		  DstPort		  2
+		}
+		Line {
+		  SrcBlock		  "Depuncture C0"
+		  SrcPort		  1
+		  DstBlock		  "Matrix\nConcatenate"
+		  DstPort		  1
+		}
+	      }
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "Remove tailbits C0"
+	      SID		      263
+	      Ports		      [1, 1]
+	      Position		      [80, 35, 130, 75]
+	      BlockMirror	      on
+	      SourceBlock	      "dspmtrx3/Submatrix"
+	      SourceType	      "Submatrix"
+	      RowSpan		      "Range of rows"
+	      RowStartMode	      "First"
+	      RowStartIndex	      "1"
+	      RowEndMode	      "Offset from last"
+	      RowEndIndex	      "6"
+	      ColSpan		      "All columns"
+	      ColStartMode	      "First"
+	      ColStartIndex	      "1"
+	      ColEndMode	      "Last"
+	      ColEndIndex	      "1"
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "Viterbi Decoder D0"
+	      SID		      264
+	      Ports		      [1, 1]
+	      Position		      [170, 27, 260, 83]
+	      BlockMirror	      on
+	      DialogController	      "commDDGCreate"
+	      DialogControllerArgs    "DataTag0"
+	      SourceBlock	      "commcnvcod2/Viterbi Decoder"
+	      SourceType	      "Viterbi Decoder"
+	      trellis		      "conv_poly"
+	      isPunctured	      "off"
+	      punctureVector	      "sPunc_pat(1).Rp13"
+	      erasures		      "off"
+	      dectype		      "Unquantized"
+	      runSigValErrCheck	      "on"
+	      nsdecb		      "3"
+	      smWordLength	      "16"
+	      tbdepth		      "34"
+	      opmode		      "Terminated"
+	      reset		      "off"
+	      outDataType	      "Inherit via internal rule"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "x0r"
+	      SID		      265
+	      Position		      [25, 48, 55, 62]
+	      BlockMirror	      on
+	      IconDisplay	      "Port number"
+	    }
+	    Line {
+	      SrcBlock		      "Remove tailbits C0"
+	      SrcPort		      1
+	      DstBlock		      "x0r"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "v0r"
+	      SrcPort		      1
+	      DstBlock		      "Depuncturing C0"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Depuncturing C0"
+	      SrcPort		      1
+	      DstBlock		      "Viterbi Decoder D0"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Viterbi Decoder D0"
+	      SrcPort		      1
+	      DstBlock		      "Remove tailbits C0"
+	      DstPort		      1
+	    }
+	  }
+	}
+	Block {
+	  BlockType		  SubSystem
+	  Name			  "Decoder D1"
+	  SID			  266
+	  Ports			  [1, 1]
+	  Position		  [330, 33, 410, 87]
+	  BlockMirror		  on
+	  MinAlgLoopOccurrences	  off
+	  PropExecContextOutsideSubsystem off
+	  RTWSystemCode		  "Auto"
+	  FunctionWithSeparateData off
+	  Opaque		  off
+	  RequestExecContextInheritance	off
+	  MaskHideContents	  off
+	  System {
+	    Name		    "Decoder D1"
+	    Location		    [722, 426, 1257, 534]
+	    Open		    off
+	    ModelBrowserVisibility  off
+	    ModelBrowserWidth	    200
+	    ScreenColor		    "white"
+	    PaperOrientation	    "landscape"
+	    PaperPositionMode	    "auto"
+	    PaperType		    "A4"
+	    PaperUnits		    "centimeters"
+	    TiledPaperMargins	    [1.270000, 1.270000, 1.270000, 1.270000]
+	    TiledPageScale	    1
+	    ShowPageBoundaries	    off
+	    ZoomFactor		    "100"
+	    Block {
+	      BlockType		      Inport
+	      Name		      "v1r"
+	      SID		      267
+	      Position		      [480, 48, 510, 62]
+	      BlockMirror	      on
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      SubSystem
+	      Name		      "Depuncturing C1"
+	      SID		      268
+	      Ports		      [1, 1]
+	      Position		      [375, 28, 455, 82]
+	      BlockMirror	      on
+	      MinAlgLoopOccurrences   off
+	      PropExecContextOutsideSubsystem off
+	      RTWSystemCode	      "Auto"
+	      FunctionWithSeparateData off
+	      Opaque		      off
+	      RequestExecContextInheritance off
+	      MaskHideContents	      off
+	      System {
+		Name			"Depuncturing C1"
+		Location		[817, 647, 1442, 813]
+		Open			off
+		ModelBrowserVisibility	off
+		ModelBrowserWidth	200
+		ScreenColor		"white"
+		PaperOrientation	"landscape"
+		PaperPositionMode	"auto"
+		PaperType		"A4"
+		PaperUnits		"centimeters"
+		TiledPaperMargins	[1.270000, 1.270000, 1.270000, 1.270000]
+		TiledPageScale		1
+		ShowPageBoundaries	off
+		ZoomFactor		"100"
+		Block {
+		  BlockType		  Inport
+		  Name			  "In1"
+		  SID			  269
+		  Position		  [570, 43, 600, 57]
+		  BlockMirror		  on
+		  IconDisplay		  "Port number"
+		}
+		Block {
+		  BlockType		  Reference
+		  Name			  "Converter for \nunquantized\ndecision"
+		  SID			  270
+		  Ports			  [1, 1]
+		  Position		  [485, 29, 545, 71]
+		  BlockMirror		  on
+		  LibraryVersion	  "1.258"
+		  SourceBlock		  "commutil2/Unipolar to\nBipolar\nConverter"
+		  SourceType		  "Unipolar to Bipolar Converter"
+		  ShowPortLabels	  "FromPortIcon"
+		  SystemSampleTime	  "-1"
+		  FunctionWithSeparateData "off"
+		  RTWMemSecFuncInitTerm	  "Inherit from model"
+		  RTWMemSecFuncExecute	  "Inherit from model"
+		  RTWMemSecDataConstants  "Inherit from model"
+		  RTWMemSecDataInternal	  "Inherit from model"
+		  RTWMemSecDataParameters "Inherit from model"
+		  M			  "2"
+		  polarity		  "Negative"
+		  dataType		  "Inherit via internal rule"
+		}
+		Block {
+		  BlockType		  Reference
+		  Name			  "Depuncture C1"
+		  SID			  271
+		  Ports			  [1, 1]
+		  Position		  [200, 28, 280, 72]
+		  BlockMirror		  on
+		  LibraryVersion	  "1.80"
+		  SourceBlock		  "commsequence2/Insert Zero"
+		  SourceType		  "Insert Zero"
+		  insertZeroVector	  "sdc.punc_pat1"
+		}
+		Block {
+		  BlockType		  Reference
+		  Name			  "Depuncture tailbit C1"
+		  SID			  272
+		  Ports			  [1, 1]
+		  Position		  [200, 98, 280, 142]
+		  BlockMirror		  on
+		  LibraryVersion	  "1.80"
+		  SourceBlock		  "commsequence2/Insert Zero"
+		  SourceType		  "Insert Zero"
+		  insertZeroVector	  "sdc.punc_tail1"
+		}
+		Block {
+		  BlockType		  Concatenate
+		  Name			  "Matrix\nConcatenate"
+		  SID			  273
+		  Ports			  [2, 1]
+		  Position		  [80, 39, 135, 81]
+		  BlockMirror		  on
+		  Mode			  "Multidimensional array"
+		}
+		Block {
+		  BlockType		  Reference
+		  Name			  "Submatrix"
+		  SID			  274
+		  Ports			  [1, 1]
+		  Position		  [355, 30, 405, 70]
+		  BlockMirror		  on
+		  LibraryVersion	  "1.846"
+		  SourceBlock		  "dspmtrx3/Submatrix"
+		  SourceType		  "Submatrix"
+		  RowSpan		  "Range of rows"
+		  RowStartMode		  "First"
+		  RowStartIndex		  "1"
+		  RowEndMode		  "Offset from last"
+		  RowEndIndex		  "sdc.ind_tail1"
+		  ColSpan		  "All columns"
+		  ColStartMode		  "First"
+		  ColStartIndex		  "1"
+		  ColEndMode		  "Last"
+		  ColEndIndex		  "1"
+		}
+		Block {
+		  BlockType		  Reference
+		  Name			  "extract tailbits"
+		  SID			  275
+		  Ports			  [1, 1]
+		  Position		  [355, 100, 405, 140]
+		  BlockMirror		  on
+		  LibraryVersion	  "1.846"
+		  SourceBlock		  "dspmtrx3/Submatrix"
+		  SourceType		  "Submatrix"
+		  RowSpan		  "Range of rows"
+		  RowStartMode		  "Offset from last"
+		  RowStartIndex		  "sdc.ind_tail1-1"
+		  RowEndMode		  "Last"
+		  RowEndIndex		  "35"
+		  ColSpan		  "All columns"
+		  ColStartMode		  "First"
+		  ColStartIndex		  "1"
+		  ColEndMode		  "Last"
+		  ColEndIndex		  "1"
+		}
+		Block {
+		  BlockType		  Outport
+		  Name			  "Out1"
+		  SID			  276
+		  Position		  [25, 53, 55, 67]
+		  BlockMirror		  on
+		  IconDisplay		  "Port number"
+		}
+		Line {
+		  SrcBlock		  "Matrix\nConcatenate"
+		  SrcPort		  1
+		  DstBlock		  "Out1"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "In1"
+		  SrcPort		  1
+		  DstBlock		  "Converter for \nunquantized\ndecision"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "Converter for \nunquantized\ndecision"
+		  SrcPort		  1
+		  Points		  [-40, 0]
+		  Branch {
+		    DstBlock		    "Submatrix"
+		    DstPort		    1
+		  }
+		  Branch {
+		    Points		    [0, 70]
+		    DstBlock		    "extract tailbits"
+		    DstPort		    1
+		  }
+		}
+		Line {
+		  SrcBlock		  "Depuncture tailbit C1"
+		  SrcPort		  1
+		  Points		  [-25, 0; 0, -50]
+		  DstBlock		  "Matrix\nConcatenate"
+		  DstPort		  2
+		}
+		Line {
+		  SrcBlock		  "extract tailbits"
+		  SrcPort		  1
+		  DstBlock		  "Depuncture tailbit C1"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "Depuncture C1"
+		  SrcPort		  1
+		  DstBlock		  "Matrix\nConcatenate"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "Submatrix"
+		  SrcPort		  1
+		  DstBlock		  "Depuncture C1"
+		  DstPort		  1
+		}
+	      }
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "Remove tailbits C1"
+	      SID		      277
+	      Ports		      [1, 1]
+	      Position		      [80, 35, 130, 75]
+	      BlockMirror	      on
+	      SourceBlock	      "dspmtrx3/Submatrix"
+	      SourceType	      "Submatrix"
+	      RowSpan		      "Range of rows"
+	      RowStartMode	      "First"
+	      RowStartIndex	      "1"
+	      RowEndMode	      "Offset from last"
+	      RowEndIndex	      "6"
+	      ColSpan		      "All columns"
+	      ColStartMode	      "First"
+	      ColStartIndex	      "1"
+	      ColEndMode	      "Last"
+	      ColEndIndex	      "1"
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "Viterbi Decoder D1"
+	      SID		      278
+	      Ports		      [1, 1]
+	      Position		      [170, 27, 260, 83]
+	      BlockMirror	      on
+	      DialogController	      "commDDGCreate"
+	      DialogControllerArgs    "DataTag1"
+	      SourceBlock	      "commcnvcod2/Viterbi Decoder"
+	      SourceType	      "Viterbi Decoder"
+	      trellis		      "conv_poly"
+	      isPunctured	      "off"
+	      punctureVector	      "sPunc_pat(1).Rp23"
+	      erasures		      "off"
+	      dectype		      "Unquantized"
+	      runSigValErrCheck	      "on"
+	      nsdecb		      "3"
+	      smWordLength	      "16"
+	      tbdepth		      "34"
+	      opmode		      "Terminated"
+	      reset		      "off"
+	      outDataType	      "Inherit via internal rule"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "x1r"
+	      SID		      279
+	      Position		      [25, 48, 55, 62]
+	      BlockMirror	      on
+	      IconDisplay	      "Port number"
+	    }
+	    Line {
+	      SrcBlock		      "Remove tailbits C1"
+	      SrcPort		      1
+	      DstBlock		      "x1r"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "v1r"
+	      SrcPort		      1
+	      DstBlock		      "Depuncturing C1"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Depuncturing C1"
+	      SrcPort		      1
+	      DstBlock		      "Viterbi Decoder D1"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Viterbi Decoder D1"
+	      SrcPort		      1
+	      DstBlock		      "Remove tailbits C1"
+	      DstPort		      1
+	    }
+	  }
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "Deinterleaver DI0"
+	  SID			  280
+	  Ports			  [1, 1]
+	  Position		  [505, 118, 585, 172]
+	  BlockMirror		  on
+	  LibraryVersion	  "1.60"
+	  SourceBlock		  "commblkintrlv2/General Block\nDeinterleaver"
+	  SourceType		  "General Block Deinterleaver"
+	  elements		  "sdc.interleave_P0"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "Deinterleaver DI1"
+	  SID			  281
+	  Ports			  [1, 1]
+	  Position		  [505, 33, 585, 87]
+	  BlockMirror		  on
+	  LibraryVersion	  "1.60"
+	  SourceBlock		  "commblkintrlv2/General Block\nDeinterleaver"
+	  SourceType		  "General Block Deinterleaver"
+	  elements		  "sdc.interleave_P1"
+	}
+	Block {
+	  BlockType		  SubSystem
+	  Name			  "Demapping 16-QAM"
+	  SID			  282
+	  Ports			  [1, 2]
+	  Position		  [735, 29, 785, 151]
+	  BlockMirror		  on
+	  MinAlgLoopOccurrences	  off
+	  PropExecContextOutsideSubsystem off
+	  RTWSystemCode		  "Auto"
+	  FunctionWithSeparateData off
+	  Opaque		  off
+	  RequestExecContextInheritance	off
+	  MaskHideContents	  off
+	  System {
+	    Name		    "Demapping 16-QAM"
+	    Location		    [2, 82, 2030, 1099]
+	    Open		    on
+	    ModelBrowserVisibility  off
+	    ModelBrowserWidth	    200
+	    ScreenColor		    "white"
+	    PaperOrientation	    "landscape"
+	    PaperPositionMode	    "auto"
+	    PaperType		    "A4"
+	    PaperUnits		    "centimeters"
+	    TiledPaperMargins	    [1.270000, 1.270000, 1.270000, 1.270000]
+	    TiledPageScale	    1
+	    ShowPageBoundaries	    off
+	    ZoomFactor		    "100"
+	    Block {
+	      BlockType		      Inport
+	      Name		      "z0r"
+	      SID		      283
+	      Position		      [900, 143, 930, 157]
+	      BlockMirror	      on
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "Buffer1"
+	      SID		      375
+	      Ports		      [1, 1]
+	      Position		      [610, 125, 660, 175]
+	      BlockMirror	      on
+	      LibraryVersion	      "1.402"
+	      SourceBlock	      "dspbuff3/Buffer"
+	      SourceType	      "Buffer"
+	      N			      "2"
+	      V			      "0"
+	      ic		      "0"
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "Buffer2"
+	      SID		      368
+	      Ports		      [1, 1]
+	      Position		      [280, 40, 330, 90]
+	      BlockMirror	      on
+	      LibraryVersion	      "1.402"
+	      SourceBlock	      "dspbuff3/Buffer"
+	      SourceType	      "Buffer"
+	      N			      "2*sdc.NmbQAMcells"
+	      V			      "0"
+	      ic		      "0"
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "Buffer3"
+	      SID		      369
+	      Ports		      [1, 1]
+	      Position		      [280, 205, 330, 255]
+	      BlockMirror	      on
+	      LibraryVersion	      "1.402"
+	      SourceBlock	      "dspbuff3/Buffer"
+	      SourceType	      "Buffer"
+	      N			      "2*sdc.NmbQAMcells"
+	      V			      "0"
+	      ic		      "0"
+	    }
+	    Block {
+	      BlockType		      Demux
+	      Name		      "Demux"
+	      SID		      284
+	      Ports		      [1, 2]
+	      Position		      [425, 131, 430, 169]
+	      BlockMirror	      on
+	      ShowName		      off
+	      Outputs		      "2"
+	      DisplayOption	      "bar"
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "Rectangular QAM\nDemodulator\nBaseband"
+	      SID		      285
+	      Ports		      [1, 1]
+	      Position		      [725, 124, 800, 176]
+	      BlockMirror	      on
+	      LibraryVersion	      "1.421"
+	      DialogController	      "commDDGCreate"
+	      DialogControllerArgs    "DataTag2"
+	      SourceBlock	      "commdigbbndam3/Rectangular QAM\nDemodulator\nBaseband"
+	      SourceType	      "Rectangular QAM Demodulator Baseband"
+	      M			      "SDC_QAM"
+	      PowType		      "Min. distance between symbols"
+	      MinDist		      "sdc.qam_norm"
+	      AvgPow		      "1"
+	      PeakPow		      "1"
+	      Ph		      "0"
+	      Dec		      "User-defined"
+	      Mapping		      "sdc.qam_map"
+	      OutType		      "Bit"
+	      DecType		      "Hard decision"
+	      VarSource		      "Dialog"
+	      Variance		      "1"
+	      outDtype1		      "Inherit via internal rule"
+	      outDtype2		      "Inherit via internal rule"
+	      derotateFactorDTMode    "Same word length as input"
+	      derotateFactorWordLen   "16"
+	      denormFactorDTMode      "Same word length as input"
+	      denormFactorWordLen     "16"
+	      prodOutDTMode	      "Inherit via internal rule"
+	      prodOutWordLen	      "32"
+	      prodOutRoundingMode     "Floor"
+	      prodOutOverflowMode     "Wrap"
+	      sumDTMode		      "Inherit via internal rule"
+	      sumWordLen	      "32"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "y1r"
+	      SID		      286
+	      Position		      [150, 223, 180, 237]
+	      BlockMirror	      on
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "y0r"
+	      SID		      287
+	      Position		      [150, 58, 180, 72]
+	      BlockMirror	      on
+	      Port		      "2"
+	      IconDisplay	      "Port number"
+	    }
+	    Line {
+	      SrcBlock		      "z0r"
+	      SrcPort		      1
+	      DstBlock		      "Rectangular QAM\nDemodulator\nBaseband"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Rectangular QAM\nDemodulator\nBaseband"
+	      SrcPort		      1
+	      DstBlock		      "Buffer1"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Demux"
+	      SrcPort		      2
+	      Points		      [-40, 0; 0, 70]
+	      DstBlock		      "Buffer3"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Demux"
+	      SrcPort		      1
+	      Points		      [-40, 0; 0, -75]
+	      DstBlock		      "Buffer2"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Buffer2"
+	      SrcPort		      1
+	      DstBlock		      "y0r"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Buffer3"
+	      SrcPort		      1
+	      DstBlock		      "y1r"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Buffer1"
+	      SrcPort		      1
+	      DstBlock		      "Demux"
+	      DstPort		      1
+	    }
+	  }
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "Out1"
+	  SID			  288
+	  Position		  [25, 83, 55, 97]
+	  BlockMirror		  on
+	  IconDisplay		  "Port number"
+	}
+	Line {
+	  SrcBlock		  "Deinterleaver DI0"
+	  SrcPort		  1
+	  DstBlock		  "Decoder D0"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Deinterleaver DI1"
+	  SrcPort		  1
+	  DstBlock		  "Decoder D1"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Decoder D0"
+	  SrcPort		  1
+	  Points		  [-115, 0; 0, -25]
+	  DstBlock		  "Concatenate\nbitstream"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "Decoder D1"
+	  SrcPort		  1
+	  DstBlock		  "Concatenate\nbitstream"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Demapping 16-QAM"
+	  SrcPort		  2
+	  Points		  [-80, 0; 0, 25]
+	  DstBlock		  "Deinterleaver DI0"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Demapping 16-QAM"
+	  SrcPort		  1
+	  DstBlock		  "Deinterleaver DI1"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Concatenate\nbitstream"
+	  SrcPort		  1
+	  DstBlock		  "Out1"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "In1"
+	  SrcPort		  1
+	  DstBlock		  "Demapping 16-QAM"
+	  DstPort		  1
+	}
+      }
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "4QAM"
+      SID		      305
+      Ports		      [1, 1]
+      Position		      [545, 115, 715, 185]
+      BlockMirror	      on
+      MinAlgLoopOccurrences   off
+      PropExecContextOutsideSubsystem off
+      RTWSystemCode	      "Auto"
+      FunctionWithSeparateData off
+      Opaque		      off
+      RequestExecContextInheritance off
+      MaskHideContents	      off
+      System {
+	Name			"4QAM"
+	Location		[1126, 334, 1731, 440]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"A4"
+	PaperUnits		"centimeters"
+	TiledPaperMargins	[1.270000, 1.270000, 1.270000, 1.270000]
+	TiledPageScale		1
+	ShowPageBoundaries	off
+	ZoomFactor		"100"
+	Block {
+	  BlockType		  Inport
+	  Name			  "In1"
+	  SID			  307
+	  Position		  [550, 48, 580, 62]
+	  BlockMirror		  on
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  SubSystem
+	  Name			  "Decoder D0"
+	  SID			  289
+	  Ports			  [1, 1]
+	  Position		  [80, 28, 160, 82]
+	  BlockMirror		  on
+	  MinAlgLoopOccurrences	  off
+	  PropExecContextOutsideSubsystem off
+	  RTWSystemCode		  "Auto"
+	  FunctionWithSeparateData off
+	  Opaque		  off
+	  RequestExecContextInheritance	off
+	  MaskHideContents	  off
+	  System {
+	    Name		    "Decoder D0"
+	    Location		    [722, 511, 1257, 619]
+	    Open		    off
+	    ModelBrowserVisibility  off
+	    ModelBrowserWidth	    200
+	    ScreenColor		    "white"
+	    PaperOrientation	    "landscape"
+	    PaperPositionMode	    "auto"
+	    PaperType		    "A4"
+	    PaperUnits		    "centimeters"
+	    TiledPaperMargins	    [1.270000, 1.270000, 1.270000, 1.270000]
+	    TiledPageScale	    1
+	    ShowPageBoundaries	    off
+	    ZoomFactor		    "100"
+	    Block {
+	      BlockType		      Inport
+	      Name		      "v0r"
+	      SID		      290
+	      Position		      [480, 48, 510, 62]
+	      BlockMirror	      on
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      SubSystem
+	      Name		      "Depuncturing C0"
+	      SID		      291
+	      Ports		      [1, 1]
+	      Position		      [375, 28, 455, 82]
+	      BlockMirror	      on
+	      MinAlgLoopOccurrences   off
+	      PropExecContextOutsideSubsystem off
+	      RTWSystemCode	      "Auto"
+	      FunctionWithSeparateData off
+	      Opaque		      off
+	      RequestExecContextInheritance off
+	      MaskHideContents	      off
+	      System {
+		Name			"Depuncturing C0"
+		Location		[817, 822, 1442, 988]
+		Open			off
+		ModelBrowserVisibility	off
+		ModelBrowserWidth	200
+		ScreenColor		"white"
+		PaperOrientation	"landscape"
+		PaperPositionMode	"auto"
+		PaperType		"A4"
+		PaperUnits		"centimeters"
+		TiledPaperMargins	[1.270000, 1.270000, 1.270000, 1.270000]
+		TiledPageScale		1
+		ShowPageBoundaries	off
+		ZoomFactor		"100"
+		Block {
+		  BlockType		  Inport
+		  Name			  "In1"
+		  SID			  292
+		  Position		  [570, 43, 600, 57]
+		  BlockMirror		  on
+		  IconDisplay		  "Port number"
+		}
+		Block {
+		  BlockType		  Reference
+		  Name			  "Converter for \nunquantized\ndecision"
+		  SID			  293
+		  Ports			  [1, 1]
+		  Position		  [485, 30, 545, 70]
+		  BlockMirror		  on
+		  LibraryVersion	  "1.258"
+		  SourceBlock		  "commutil2/Unipolar to\nBipolar\nConverter"
+		  SourceType		  "Unipolar to Bipolar Converter"
+		  ShowPortLabels	  "FromPortIcon"
+		  SystemSampleTime	  "-1"
+		  FunctionWithSeparateData "off"
+		  RTWMemSecFuncInitTerm	  "Inherit from model"
+		  RTWMemSecFuncExecute	  "Inherit from model"
+		  RTWMemSecDataConstants  "Inherit from model"
+		  RTWMemSecDataInternal	  "Inherit from model"
+		  RTWMemSecDataParameters "Inherit from model"
+		  M			  "2"
+		  polarity		  "Negative"
+		  dataType		  "Inherit via internal rule"
+		}
+		Block {
+		  BlockType		  Reference
+		  Name			  "Depuncture C0"
+		  SID			  294
+		  Ports			  [1, 1]
+		  Position		  [200, 28, 280, 72]
+		  BlockMirror		  on
+		  LibraryVersion	  "1.80"
+		  SourceBlock		  "commsequence2/Insert Zero"
+		  SourceType		  "Insert Zero"
+		  insertZeroVector	  "sdc.punc_pat0"
+		}
+		Block {
+		  BlockType		  Reference
+		  Name			  "Depuncture tailbits C0"
+		  SID			  295
+		  Ports			  [1, 1]
+		  Position		  [200, 98, 280, 142]
+		  BlockMirror		  on
+		  LibraryVersion	  "1.80"
+		  SourceBlock		  "commsequence2/Insert Zero"
+		  SourceType		  "Insert Zero"
+		  insertZeroVector	  "sdc.punc_tail0"
+		}
+		Block {
+		  BlockType		  Concatenate
+		  Name			  "Matrix\nConcatenate"
+		  SID			  296
+		  Ports			  [2, 1]
+		  Position		  [80, 39, 135, 81]
+		  BlockMirror		  on
+		  Mode			  "Multidimensional array"
+		}
+		Block {
+		  BlockType		  Reference
+		  Name			  "Submatrix"
+		  SID			  297
+		  Ports			  [1, 1]
+		  Position		  [355, 30, 405, 70]
+		  BlockMirror		  on
+		  LibraryVersion	  "1.846"
+		  SourceBlock		  "dspmtrx3/Submatrix"
+		  SourceType		  "Submatrix"
+		  RowSpan		  "Range of rows"
+		  RowStartMode		  "First"
+		  RowStartIndex		  "1"
+		  RowEndMode		  "Offset from last"
+		  RowEndIndex		  "sdc.ind_tail0"
+		  ColSpan		  "All columns"
+		  ColStartMode		  "First"
+		  ColStartIndex		  "1"
+		  ColEndMode		  "Last"
+		  ColEndIndex		  "1"
+		}
+		Block {
+		  BlockType		  Reference
+		  Name			  "extract tailbits"
+		  SID			  298
+		  Ports			  [1, 1]
+		  Position		  [355, 100, 405, 140]
+		  BlockMirror		  on
+		  LibraryVersion	  "1.846"
+		  SourceBlock		  "dspmtrx3/Submatrix"
+		  SourceType		  "Submatrix"
+		  RowSpan		  "Range of rows"
+		  RowStartMode		  "Offset from last"
+		  RowStartIndex		  "sdc.ind_tail0-1"
+		  RowEndMode		  "Last"
+		  RowEndIndex		  "35"
+		  ColSpan		  "All columns"
+		  ColStartMode		  "First"
+		  ColStartIndex		  "1"
+		  ColEndMode		  "Last"
+		  ColEndIndex		  "1"
+		}
+		Block {
+		  BlockType		  Outport
+		  Name			  "Out1"
+		  SID			  299
+		  Position		  [25, 53, 55, 67]
+		  BlockMirror		  on
+		  IconDisplay		  "Port number"
+		}
+		Line {
+		  SrcBlock		  "Matrix\nConcatenate"
+		  SrcPort		  1
+		  DstBlock		  "Out1"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "In1"
+		  SrcPort		  1
+		  DstBlock		  "Converter for \nunquantized\ndecision"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "Converter for \nunquantized\ndecision"
+		  SrcPort		  1
+		  Points		  [-40, 0]
+		  Branch {
+		    DstBlock		    "Submatrix"
+		    DstPort		    1
+		  }
+		  Branch {
+		    Points		    [0, 70]
+		    DstBlock		    "extract tailbits"
+		    DstPort		    1
+		  }
+		}
+		Line {
+		  SrcBlock		  "extract tailbits"
+		  SrcPort		  1
+		  DstBlock		  "Depuncture tailbits C0"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "Submatrix"
+		  SrcPort		  1
+		  DstBlock		  "Depuncture C0"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "Depuncture tailbits C0"
+		  SrcPort		  1
+		  Points		  [-20, 0; 0, -50]
+		  DstBlock		  "Matrix\nConcatenate"
+		  DstPort		  2
+		}
+		Line {
+		  SrcBlock		  "Depuncture C0"
+		  SrcPort		  1
+		  DstBlock		  "Matrix\nConcatenate"
+		  DstPort		  1
+		}
+	      }
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "Remove tailbits C0"
+	      SID		      300
+	      Ports		      [1, 1]
+	      Position		      [80, 35, 130, 75]
+	      BlockMirror	      on
+	      SourceBlock	      "dspmtrx3/Submatrix"
+	      SourceType	      "Submatrix"
+	      RowSpan		      "Range of rows"
+	      RowStartMode	      "First"
+	      RowStartIndex	      "1"
+	      RowEndMode	      "Offset from last"
+	      RowEndIndex	      "6"
+	      ColSpan		      "All columns"
+	      ColStartMode	      "First"
+	      ColStartIndex	      "1"
+	      ColEndMode	      "Last"
+	      ColEndIndex	      "1"
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "Viterbi Decoder D0"
+	      SID		      301
+	      Ports		      [1, 1]
+	      Position		      [170, 27, 260, 83]
+	      BlockMirror	      on
+	      DialogController	      "commDDGCreate"
+	      DialogControllerArgs    "DataTag3"
+	      SourceBlock	      "commcnvcod2/Viterbi Decoder"
+	      SourceType	      "Viterbi Decoder"
+	      trellis		      "conv_poly"
+	      isPunctured	      "off"
+	      punctureVector	      "sPunc_pat(1).Rp13"
+	      erasures		      "off"
+	      dectype		      "Unquantized"
+	      runSigValErrCheck	      "on"
+	      nsdecb		      "3"
+	      smWordLength	      "16"
+	      tbdepth		      "34"
+	      opmode		      "Terminated"
+	      reset		      "off"
+	      outDataType	      "Inherit via internal rule"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "x0r"
+	      SID		      302
+	      Position		      [25, 48, 55, 62]
+	      BlockMirror	      on
+	      IconDisplay	      "Port number"
+	    }
+	    Line {
+	      SrcBlock		      "Remove tailbits C0"
+	      SrcPort		      1
+	      DstBlock		      "x0r"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "v0r"
+	      SrcPort		      1
+	      DstBlock		      "Depuncturing C0"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Depuncturing C0"
+	      SrcPort		      1
+	      DstBlock		      "Viterbi Decoder D0"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Viterbi Decoder D0"
+	      SrcPort		      1
+	      DstBlock		      "Remove tailbits C0"
+	      DstPort		      1
+	    }
+	  }
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "Deinterleaver DI0"
+	  SID			  303
+	  Ports			  [1, 1]
+	  Position		  [255, 28, 335, 82]
+	  BlockMirror		  on
+	  LibraryVersion	  "1.60"
+	  SourceBlock		  "commblkintrlv2/General Block\nDeinterleaver"
+	  SourceType		  "General Block Deinterleaver"
+	  elements		  "sdc.interleave_P0"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "Rectangular QAM\nDemodulator\nBaseband"
+	  SID			  304
+	  Ports			  [1, 1]
+	  Position		  [450, 29, 525, 81]
+	  BlockMirror		  on
+	  LibraryVersion	  "1.421"
+	  DialogController	  "commDDGCreate"
+	  DialogControllerArgs	  "DataTag4"
+	  SourceBlock		  "commdigbbndam3/Rectangular QAM\nDemodulator\nBaseband"
+	  SourceType		  "Rectangular QAM Demodulator Baseband"
+	  M			  "SDC_QAM"
+	  PowType		  "Min. distance between symbols"
+	  MinDist		  "sdc.qam_norm"
+	  AvgPow		  "1"
+	  PeakPow		  "1"
+	  Ph			  "0"
+	  Dec			  "User-defined"
+	  Mapping		  "sdc.qam_map"
+	  OutType		  "Bit"
+	  DecType		  "Hard decision"
+	  VarSource		  "Dialog"
+	  Variance		  "1"
+	  outDtype1		  "Inherit via internal rule"
+	  outDtype2		  "Inherit via internal rule"
+	  derotateFactorDTMode	  "Same word length as input"
+	  derotateFactorWordLen	  "16"
+	  denormFactorDTMode	  "Same word length as input"
+	  denormFactorWordLen	  "16"
+	  prodOutDTMode		  "Inherit via internal rule"
+	  prodOutWordLen	  "32"
+	  prodOutRoundingMode	  "Floor"
+	  prodOutOverflowMode	  "Wrap"
+	  sumDTMode		  "Inherit via internal rule"
+	  sumWordLen		  "32"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "Out1"
+	  SID			  306
+	  Position		  [25, 48, 55, 62]
+	  BlockMirror		  on
+	  IconDisplay		  "Port number"
+	}
+	Line {
+	  SrcBlock		  "Rectangular QAM\nDemodulator\nBaseband"
+	  SrcPort		  1
+	  DstBlock		  "Deinterleaver DI0"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Deinterleaver DI0"
+	  SrcPort		  1
+	  DstBlock		  "Decoder D0"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Decoder D0"
+	  SrcPort		  1
+	  DstBlock		  "Out1"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "In1"
+	  SrcPort		  1
+	  DstBlock		  "Rectangular QAM\nDemodulator\nBaseband"
+	  DstPort		  1
+	}
+      }
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "SDC channel decoder"
+      SID		      308
+      Ports		      [1, 1]
+      Position		      [130, 129, 230, 171]
+      BlockChoice	      "16QAM"
+      TemplateBlock	      "self"
+      MemberBlocks	      "16QAM,4QAM"
+      MinAlgLoopOccurrences   off
+      PropExecContextOutsideSubsystem off
+      RTWSystemCode	      "Auto"
+      FunctionWithSeparateData off
+      Opaque		      off
+      RequestExecContextInheritance off
+      MaskHideContents	      off
+      System {
+	Name			"SDC channel decoder"
+	Location		[148, 182, 646, 482]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"A4"
+	PaperUnits		"centimeters"
+	TiledPaperMargins	[1.270000, 1.270000, 1.270000, 1.270000]
+	TiledPageScale		1
+	ShowPageBoundaries	off
+	ZoomFactor		"100"
+	Block {
+	  BlockType		  Inport
+	  Name			  "In1"
+	  SID			  309
+	  Position		  [20, 40, 40, 60]
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "16QAM"
+	  SID			  311
+	  Ports			  [1, 1]
+	  Position		  [100, 40, 140, 80]
+	  BlockMirror		  on
+	  LibraryVersion	  "1.10"
+	  SourceBlock		  "SDC_decoder_lib/16QAM"
+	  SourceType		  "SubSystem"
+	  ShowPortLabels	  "FromPortIcon"
+	  SystemSampleTime	  "-1"
+	  FunctionWithSeparateData "off"
+	  RTWMemSecFuncInitTerm	  "Inherit from model"
+	  RTWMemSecFuncExecute	  "Inherit from model"
+	  RTWMemSecDataConstants  "Inherit from model"
+	  RTWMemSecDataInternal	  "Inherit from model"
+	  RTWMemSecDataParameters "Inherit from model"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "Out1"
+	  SID			  310
+	  Position		  [200, 40, 220, 60]
+	  IconDisplay		  "Port number"
+	}
+	Line {
+	  SrcBlock		  "In1"
+	  SrcPort		  1
+	  DstBlock		  "16QAM"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "16QAM"
+	  SrcPort		  1
+	  DstBlock		  "Out1"
+	  DstPort		  1
+	}
+      }
+    }
+  }
+}
+MatData {
+  NumRecords		  5
+  DataRecord {
+    Tag			    DataTag4
+    Data		    "  %)30     .    <     8    (     0         %    \"     $    !     0         .    0     8    (    !     "
+    "     %    \"     $    /     0         0    #P   %)104U$96UO9'5L871O<@ "
+  }
+  DataRecord {
+    Tag			    DataTag3
+    Data		    "  %)30     .    <     8    (     0         %    \"     $    !     0         .    0     8    (    !     "
+    "     %    \"     $    .     0         0    #@   %9I=&5R8FE$96-O9&5R   "
+  }
+  DataRecord {
+    Tag			    DataTag2
+    Data		    "  %)30     .    <     8    (     0         %    \"     $    !     0         .    0     8    (    !     "
+    "     %    \"     $    /     0         0    #P   %)104U$96UO9'5L871O<@ "
+  }
+  DataRecord {
+    Tag			    DataTag1
+    Data		    "  %)30     .    <     8    (     0         %    \"     $    !     0         .    0     8    (    !     "
+    "     %    \"     $    .     0         0    #@   %9I=&5R8FE$96-O9&5R   "
+  }
+  DataRecord {
+    Tag			    DataTag0
+    Data		    "  %)30     .    <     8    (     0         %    \"     $    !     0         .    0     8    (    !     "
+    "     %    \"     $    .     0         0    #@   %9I=&5R8FE$96-O9&5R   "
+  }
+}
